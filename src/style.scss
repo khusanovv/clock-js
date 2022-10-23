@@ -1,0 +1,87 @@
+*,*::after, *::before{
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(45deg, #200122, #6f0000, #BA8B02);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 2rem;
+    color: #fff;
+    
+}
+.clock{
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(45deg, #6f0000,#200122);
+    border-radius: 50%;
+    border: 10px solid #6f0000c6;
+    position: relative;
+    box-shadow: 0px 0px 50px 34px #200122;
+    
+    
+    .number{
+        --rotation:0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transform: rotate(var(--rotation));
+    }
+    .namber__1{ --rotation:30deg;}
+    .namber__2{ --rotation:60deg;}
+    .namber__3{ --rotation:90deg;}
+    .namber__4{ --rotation:120deg;}
+    .namber__5{ --rotation:150deg;}
+    .namber__6{ --rotation:180deg;}
+    .namber__7{ --rotation:210deg;}
+    .namber__8{ --rotation:240deg;}
+    .namber__9{ --rotation:270deg;}
+    .namber__10{ --rotation:300deg;}
+    .namber__11{ --rotation:330deg;}
+
+    &::after{
+        content: "";
+        position: absolute;
+        background-color: #000000;
+        z-index: 11;
+        width: 20px;
+        height: 20px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+    }
+    .hand{
+        --rotation:0;
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+        width: 10px;
+        height: 50%;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        transform-origin:bottom ;
+        background-color: black;
+        transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+    }
+    .hand__sekund{
+        width: 3px;
+        height: 45%;
+        background-color: red;
+        z-index: 10;
+    }
+    .hand__minute
+    {
+        width: 7px;
+        height: 40%;
+        background-color: black;
+    }
+    .hand__hour{
+        width: 10px;
+        height: 33%;
+        background-color: blue($color: #000000);
+    }
+
+}
