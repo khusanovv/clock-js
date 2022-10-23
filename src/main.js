@@ -12,10 +12,11 @@ function setClock() {
     const minuteTime = currentData.getMinutes() * deg
     const hourTime = currentData.getHours() *30
 
-
+    // varinat 2
     // setRotation(sekundHand, secondTime)
     // setRotation(minuteHand, minuteTime)
     // setRotation(hourHand, hourTime)
+    
     hourHand.style.transform = `rotateZ(${(hourTime) + (minuteTime/12)}deg)`;
     minuteHand.style.transform = `rotateZ(${minuteTime}deg)`;
     sekundHand.style.transform = `rotateZ(${secondTime}deg)`
@@ -23,9 +24,11 @@ function setClock() {
    
 
 }
+
 // function setRotation(element, rotationTime){
 //     element.style.setProperty('rotation', rotationTime * 360)
 // }
+
 setClock()
 function bos() {
     
