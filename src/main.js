@@ -1,4 +1,5 @@
 // Bir pasda ikki yil otibdi
+// Uje 3 yil otvoti
 setInterval(setClock,1000);
 
 const hourHand = document.querySelector('[data-hour-hand]'),
